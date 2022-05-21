@@ -10,7 +10,7 @@ WORKDIR /usr/src/javacalculator
 COPY JavaCalculatorApp/target/JavaCalculatorApp.war ./JavaCalculatorApp.war
 
 # Expose container port
-EXPOSE 8080
+EXPOSE 3000
 
 # Set directory for volume
 VOLUME /var/lib/javacalculator
