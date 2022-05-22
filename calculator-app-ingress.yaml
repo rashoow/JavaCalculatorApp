@@ -16,7 +16,7 @@ spec:
           serviceName: calculator-app
           servicePort: 80
         path: /my-calculator-app(/|$)(.*)
-  - host: a8113f544116f444b899e018cf651e61-16669756.us-east-1.elb.amazonaws.com # change the IP address here
+  - host: ab11e8f0faae943ca8a674be98e246e1-751788569.us-east-1.elb.amazonaws.com  # change the IP address here
     http:
       paths:
       - backend:
