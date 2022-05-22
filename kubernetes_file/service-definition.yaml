@@ -4,7 +4,7 @@ kind: Service
 metadata:
   labels:
     app: calculator-app
-    k8s-app: calculator-appp
+    k8s-app: calculator-app
   name: calculator-app
 spec:
   ports:
@@ -12,6 +12,6 @@ spec:
     port: 80
     protocol: TCP
     targetPort: 8080
-  type: LoadBalancer # ClusterIP # LoadBalancer # NodePort
+  type: ClusterIP # LoadBalancer # NodePort
   selector:
     app: calculator-app
