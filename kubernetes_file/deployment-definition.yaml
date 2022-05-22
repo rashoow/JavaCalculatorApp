@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: calculator-appp
+        app: calculator-app
     spec:
       containers:
       - name: my-calculator-app
