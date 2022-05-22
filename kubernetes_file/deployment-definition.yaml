@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: calculator-app
+  name: calculator-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: calculator-app
+  template:
+    metadata:
+      labels:
+        app: calculator-appp
+    spec:
+      containers:
+      - name: my-calculator-app
+        image: rashoow/calculator-app:f7414ca
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /var/lib/calculator-log/
+          name: storage-volume
+      volumes:
+      - name: storage-volume
+        hostPath:
+          path: /var/lib/calculator
+          type: DirectoryOrCreate
