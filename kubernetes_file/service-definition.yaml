@@ -12,6 +12,6 @@ spec:
     port: 80
     protocol: TCP
     targetPort: 8080
-  type: LoadBalancer #ClusterIP # LoadBalancer # NodePort
+  type: ClusterIP # LoadBalancer # NodePort
   selector:
     app: calculator-app
