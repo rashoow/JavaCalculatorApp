@@ -12,7 +12,8 @@ FROM tomcat:9-jre17
 WORKDIR /usr/local/tomcat/webapps
 
 # Copy war file into container
-COPY --from=build /app/target/JavaCalculatorApp.war ./JavaCalculatorApp.war
+RUN rm -rf ROOT
+COPY --from=build /app/target/JavaCalculatorApp.war ./ROOT.war
 
 # Expose container port
 EXPOSE 8080
